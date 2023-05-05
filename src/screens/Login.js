@@ -5,7 +5,7 @@ const login = () => {
   return (
     <ScrollView>
       <View>
-        <Text>Laode Saady</Text>
+        <Text >Laode Saady</Text>
       </View>
     </ScrollView>
   )

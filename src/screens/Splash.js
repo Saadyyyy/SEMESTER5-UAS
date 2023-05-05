@@ -1,14 +1,35 @@
-import { StyleSheet, Text, View , Image} from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
+import Logo from '../assets/Movie.png'
 
-const Splash = () => {
-  return (
-    <View>
-      <Text>Splash</Text>
-    </View>
-  )
+const SplashScreen = ({ navigation }) => {
+    setTimeout(() => {
+        navigation.replace('LoginScreen');
+    }, 3000);
+    return (
+        <View style={styles.container}>
+            <Image source={Logo} style={styles.logo} />
+            <Text style={styles.text}>Movie Review</Text>
+        </View>
+    )
 }
 
-export default Splash
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#000',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    logo: {
+        width: 200,
+        height: 200,
+    },
+    text: {
+        color: 'white',
+        fontSize: 30,
+        marginTop: 20,
+    },
+})
 
-const styles = StyleSheet.create({})
+export default SplashScreen
